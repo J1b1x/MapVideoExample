@@ -1,0 +1,8 @@
+name: "MapVideoExample"
+version: 1.0
+api: 5.0.0
+main: Jibix\MapVideoExample\Main
+author: "Jibix"
+permissions:
+  video.command:
+    default: op

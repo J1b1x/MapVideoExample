@@ -1,0 +1,19 @@
+{
+  "name": "jibix/map-video-example",
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "Jibix\\VideoExample\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Jibix"
+    }
+  ],
+  "require": {
+    "jibix/map-video": "dev-master",
+    "ext-gd": "*",
+    "ext-igbinary": "*"
+  }
+}
