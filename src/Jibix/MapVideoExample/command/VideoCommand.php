@@ -42,11 +42,9 @@ class VideoCommand extends Command{
             Video::id($video),
             $file,
             static function (Video $video) use ($name): void{
-                $player = Server::getInstance()->getPlayerExact($name);
-                if ($player !== null) {
-                    $player->sendActionBarMessage("§aDone, starting video...");
-                    VideoSession::get($player)->play($video, new VideoPlaySettings());
-                }
+                if (!$player = Server::getInstance()->getPlayerExact($name)) return;
+                $player->sendActionBarMessage("§aDone, starting video...");
+                VideoSession::get($player)->play($video, new VideoPlaySettings());
             },
             static function (int $totalFrames, int $loadedFrames) use ($name): void{
                 $player = Server::getInstance()->getPlayerExact($name);
