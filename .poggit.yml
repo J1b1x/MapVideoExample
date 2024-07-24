@@ -6,6 +6,6 @@ projects:
   MapVideoExample:
     path: ""
     libs:
-      - src: J1b1x/MapVideo
+      - src: J1b1x/MapVideo/MapVideo
         version: ^0.0.1
 ...
