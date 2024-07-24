@@ -5,6 +5,7 @@ branches:
 projects:
   MapVideoExample:
     path: ""
+    icon: "icon.gif"
     libs:
       - src: J1b1x/MapVideo/MapVideo
         version: ^0.0.1
