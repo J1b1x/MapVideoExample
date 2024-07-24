@@ -23,7 +23,7 @@ class VideoCommand extends Command{
 
     public function __construct(string $name){
         parent::__construct($name, "Play a video on a map", "/$name <name>");
-        $this->setPermission("video.command");
+        $this->setPermission("mapvideo.command");
     }
 
     public function execute(CommandSender $sender, string $commandLabel, array $args): void{
