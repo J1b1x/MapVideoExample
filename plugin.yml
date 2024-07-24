@@ -1,4 +1,4 @@
-name: "MapVideoExample"
+name: "MapVideo"
 version: 1.0
 api: 5.0.0
 main: Jibix\MapVideoExample\Main
