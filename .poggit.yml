@@ -6,6 +6,6 @@ projects:
   MapVideoExample:
     path: ""
     libs:
-      - src: Jibix/MapVideo/MapVideo
+      - src: J1b1x/MapVideo
         version: ^0.0.1
 ...
