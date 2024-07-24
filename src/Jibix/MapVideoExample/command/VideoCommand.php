@@ -9,6 +9,8 @@ use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\command\utils\InvalidCommandSyntaxException;
 use pocketmine\player\Player;
+use pocketmine\plugin\Plugin;
+use pocketmine\plugin\PluginOwned;
 use pocketmine\Server;
 
 
@@ -19,11 +21,16 @@ use pocketmine\Server;
  * @date 06.12.2023 - 19:06
  * @project MapVideo
  */
-class VideoCommand extends Command{
+class VideoCommand extends Command implements PluginOwned{
+
+    //I hate you poggit
+    public function getOwningPlugin(): Plugin{
+        return Main::getInstance();
+    }
 
     public function __construct(string $name){
         parent::__construct($name, "Play a video on a map", "/$name <name>");
-        $this->setPermission("video.command");
+        $this->setPermission("mapvideo.command");
     }
 
     public function execute(CommandSender $sender, string $commandLabel, array $args): void{
