@@ -108,9 +108,6 @@ class GifFrameExtractor
      */
     private $orgvars;
 
-    private $gifHeight;
-    private $gifWidth;
-
     // Methods
     // ===================================================================================
     
@@ -522,10 +519,6 @@ class GifFrameExtractor
     {
         $this->handle = fopen($filename, "rb");
         $this->pointer = 0;
-        
-        $imageSize = getimagesize($filename);
-        $this->gifWidth = $imageSize[0];
-        $this->gifHeight = $imageSize[1];
     }
     
     /**
