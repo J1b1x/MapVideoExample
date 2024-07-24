@@ -107,7 +107,10 @@ class GifFrameExtractor
      * (old: orgvars)
      */
     private $orgvars;
-    
+
+    private $gifHeight;
+    private $gifWidth;
+
     // Methods
     // ===================================================================================
     
