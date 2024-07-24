@@ -5,6 +5,7 @@ branches:
 projects:
   MapVideoExample:
     path: ""
+    libs:
       - src: Jibix/MapVideo/MapVideo
         version: ^0.0.1
 ...
