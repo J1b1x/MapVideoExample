@@ -13,6 +13,7 @@
   ],
   "require": {
     "jibix/map-video": "dev-master",
+    "sybio/gif-frame-extractor": "dev-master",
     "ext-gd": "*",
     "ext-igbinary": "*"
   }
