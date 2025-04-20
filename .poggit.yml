@@ -9,4 +9,6 @@ projects:
     libs:
       - src: J1b1x/MapVideo/MapVideo
         version: ^0.0.1
+      - src: GifFrameExtractor\GifFrameExtractor
+        version: ^0.0.1
 ...
