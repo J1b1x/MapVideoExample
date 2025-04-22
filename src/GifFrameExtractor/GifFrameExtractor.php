@@ -83,10 +83,7 @@ class GifFrameExtractor
      * @var integer
      */
     private $totalDuration;
-    
-    /**
-     * @var integer
-     */
+
     private $handle;
     
     /**
