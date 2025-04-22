@@ -17,11 +17,6 @@ class GifFrameExtractor
     // ===================================================================================
     
     /**
-     * @var resource
-     */
-    private $gif;
-    
-    /**
      * @var array
      */
     private $frames;
@@ -219,7 +214,7 @@ class GifFrameExtractor
         
         while (!$this->checkByte(0x3b) && !$this->checkEOF()) {
             
-            $this->getCommentData(1);
+            $this->getCommentData();
             $this->parseGraphicsExtension(2);
             $this->getFrameString(2);
             $this->getApplicationData();
@@ -519,19 +514,6 @@ class GifFrameExtractor
     {
         $this->handle = fopen($filename, "rb");
         $this->pointer = 0;
-        
-        $imageSize = getimagesize($filename);
-        $this->gifWidth = $imageSize[0];
-        $this->gifHeight = $imageSize[1];
-    }
-    
-    /**
-     * Close the read gif file (old: closefile)
-     */
-    private function closeFile()
-    {
-        fclose($this->handle);
-        $this->handle = 0;
     }
     
     /**
@@ -660,7 +642,6 @@ class GifFrameExtractor
      */
     private function reset()
     {
-        $this->gif = null;
         $this->totalDuration = $this->gifMaxHeight = $this->gifMaxWidth = $this->handle = $this->pointer = $this->frameNumber = 0;
         $this->frameDimensions = $this->framePositions = $this->frameImages = $this->frameDurations = $this->globaldata = $this->orgvars = $this->frames = $this->fileHeader = $this->frameSources = array();
     }
